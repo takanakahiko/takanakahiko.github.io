@@ -3,6 +3,10 @@
     padding:0;
 }
 
+body *:not(.spBack){
+	text-align:center;
+}
+
 .spBack {
     top:0;
     left:0;
