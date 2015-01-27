@@ -1,0 +1,17 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.spBack {
+    top:0;
+    left:0;
+    z-index:-1;
+    position:absolute;
+    width:100%;
+}
+
+.spBack img {
+    position:absolute;
+    width:100%;
+}
