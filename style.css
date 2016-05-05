@@ -44,8 +44,6 @@ body:before{
 }
 
 .grid-item {
-    width:80px;
-    height:80px;
     float:left;
     /*background:#FF0586;*/
     background:#FFFFFF;
@@ -54,27 +52,34 @@ body:before{
     padding:0;
 }
 
+@media (min-width: 768px){
+.grid-item {
+    width:80px;
+    height:80px;
+}
+
 .width2 {
-    width: 178px;
+width: 178px;
 }
 
 .height2{
-    height: 178px;
+height: 178px;
+}
 }
 
 @media (min-width: 992px){
-	.grid-item {
-        width:160px;
-        height:160px;
-    }
-    
-    .width2 {
-        width: 318px;
-    }
-    
-    .height2{
-        height: 318px;
-    }
+.grid-item {
+width:160px;
+height:160px;
+}
+
+.width2 {
+width: 318px;
+}
+
+.height2{
+height: 318px;
+}
 }
 
 .grid-item img{
