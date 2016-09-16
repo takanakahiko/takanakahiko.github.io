@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font: 30px sans-serif;
+    padding:0;
+}
+
+body:before{
+    background:url("https://ton.twitter.com/1.1/ton/data/dm/728131580879724547/728131580909133825/33cU9wF-.jpg");
+    background-repeat:no-repeat;
+    background-position:right bottom;
+    background-size:50vh auto;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 108px;
+    content: "";
+    z-index: -1;
+}
+
+
+
+#wrapper{
+    margin:5px;
+    padding-right:15%;
+}
+
+.grid{
+    width:100%;
+}
+
+
+.grid:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+.grid-item {
+    float:left;
+    /*background:#FF0586;*/
+    background:#FFFFFF;
+    border:4px solid #eee;
+    margin:0;
+    padding:0;
+}
+
+@media (min-width: 768px){
+.grid-item {
+    width:80px;
+    height:80px;
+}
+
+.width2 {
+width: 178px;
+}
+
+.height2{
+height: 178px;
+}
+}
+
+@media (min-width: 992px){
+.grid-item {
+width:160px;
+height:160px;
+}
+
+.width2 {
+width: 318px;
+}
+
+.height2{
+height: 318px;
+}
+}
+
+.grid-item img{
+    width:80%;
+    height:80%;
+    margin:10%;
+}
+
+.grid-item .full-img{
+    width:100%;
+    height:100%;
+    margin:0%
+}
