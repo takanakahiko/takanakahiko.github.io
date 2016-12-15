@@ -5,7 +5,7 @@ function getFile(){
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
     req.onload = function(){
       var md = marked(req.responseText);
-      document.body.innerHTML(md);
+      document.body.innerHTML = md;
     }
 }
 
