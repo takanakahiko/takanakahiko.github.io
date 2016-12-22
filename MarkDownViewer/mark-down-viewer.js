@@ -6,6 +6,7 @@ function getFile(){
     req.onload = function(){
       var md = marked(req.responseText);
       md = md.replace(/(<p>.*?)\n(.*?<\/p>)/im, '$1<br>$2');
+      console.log(md);
       document.body.innerHTML = md;
     }
 }
