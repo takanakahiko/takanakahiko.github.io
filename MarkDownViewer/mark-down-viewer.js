@@ -4,6 +4,9 @@ function getFile(){
     req.send(null);// HTTPリクエストの発行
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
     req.onload = function(){
+      marked.setOptions({
+          langPrefix: ''
+      });
       var md = marked(req.responseText);
       console.log(md);
       document.body.innerHTML = md;
