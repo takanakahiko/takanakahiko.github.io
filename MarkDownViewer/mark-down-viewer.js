@@ -5,6 +5,7 @@ function getFile(){
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
     req.onload = function(){
       var md = marked(req.responseText);
+      md.replace(/<p[^>]+?\/>|<p(\n)*?\/p>/gi, '<br>');
       document.body.innerHTML = md;
     }
 }
