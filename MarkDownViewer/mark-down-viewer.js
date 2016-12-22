@@ -7,6 +7,7 @@ function getFile(){
       var md = marked(req.responseText);
       console.log(md);
       document.body.innerHTML = md;
+      SyntaxHighlighter.all();
     }
 }
 
