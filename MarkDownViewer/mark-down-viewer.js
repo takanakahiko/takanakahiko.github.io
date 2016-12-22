@@ -5,16 +5,15 @@ function getFile(){
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
     req.onload = function(){
       var md = marked(req.responseText);
-      md = md.replace(/(<p>(?!<code).*?)\n(.*?<\/p>)/im, '$1<br>$2');
       console.log(md);
       document.body.innerHTML = md;
     }
 }
 
 function test(){
-  var md = marked("aaaaa\naaaaaa");
+  var md = marked("#aaaaa\naaaaaa\naaaaa");
   console.log(md);
-  md = md.replace(/(<p>.*?)\n(.*?<\/p>)/im, '$1<br>$2');
+  md = md.replace(/(<p>.*?)(?!<.*)\n(?!.*>)(.*?<\/p>)/, '$1<br>$2');
   console.log(md);
   document.body.innerHTML = md;
 }
