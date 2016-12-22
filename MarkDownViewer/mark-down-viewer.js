@@ -13,7 +13,7 @@ function getFile(){
       hljs.initHighlightingOnLoad();
       Array.from(
         document.querySelectorAll("pre code"),
-        e => hljs.highlightBlock(e);
+        e => hljs.highlightBlock(e)
       );
     }
 }
