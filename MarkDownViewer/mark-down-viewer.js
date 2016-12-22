@@ -11,9 +11,10 @@ function getFile(){
       console.log(md);
       document.body.innerHTML = md;
       hljs.initHighlightingOnLoad();
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
+      Array.from(
+        document.querySelectorAll("pre code"),
+        e => hljs.highlightBlock(e);
+      );
     }
 }
 
