@@ -1,37 +1,61 @@
-# メールを送信する
+GoogleAppsScript逆引き辞典01(ウェブページのHTMLを取得する)
+# ウェブページのHTMLを取得する
 
 ## ひとこと説明
-`GmailApp.sendEmail(recipient, subject, body)`で送信できます。
+`UrlFetchApp.fetch(url).getContentText()`で取得できます
 
 ## 実例
-```js:コード.gs
+### コード.gs
+```
+function getHTML(url) {
+
+  //urlにアクセスした結果をret1に格納します。
+  var ret1 = UrlFetchApp.fetch(url);
+
+  //rer1内にあるレスポンス内容を文字列型でret2に格納します。
+  var ret2 = ret1.getContentText();
+
+  //結果を返します
+  return ret2;
+}
+
+
 function test(){
 
-  //送信先のメールアドレスを指定します
-  var recipient = "xxxxxxx@xxxxx.xxxx";
+  //URLからHTMLを受け取ります
+  var html = getHTML("http://takanakahiko.me/test.html");
 
-  //題名を指定します
-  var subject = "テストメールです";
-
-  //本文を指定します(改行は\nで行います)
-  var body = "こんにちは！\n元気ですか？";
-
-  //メールを送信します
-  GmailApp.sendEmail(recipient, subject, body);
+  //取得した内容をログに出します。
+  Logger.log(html);
 }
+```
+
+### test()を実行した出力
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>テスト</title>
+  </head>
+  <body>
+    これはテストです
+  </body>
+</html>
 ```
 
 ## 説明
 
-### `GmailApp.sendEmail(recipient, subject, body);`
-[GmailApp](https://developers.google.com/apps-script/reference/gmail/gmail-app)内の[sendEmail(recipient, subject, body)](https://developers.google.com/apps-script/reference/gmail/gmail-app#sendEmail(String,String,String))を利用します。
-これで、送信先・題名・本文を指定してメールを送ることができます。
-引数は以下のとおりです。返り値は[GmailApp](https://developers.google.com/apps-script/reference/gmail/gmail-app)です。
+### `var ret1 = UrlFetchApp.fetch(url);`
+まず、[UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)内の[fetch(url)](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app#fetch(String))を利用します。
+これでURLに対してアクセスしに行きます。
+引数は以下のとおりです。返り値は[HTTPResponse](https://developers.google.com/apps-script/reference/url-fetch/http-response)です。
 
 | 引数名 | 型 | 説明 |
 |:-:|:-:|:-:|
-| recipient| String | 送信先のメールアドレス |
-| subject| String | 題名 |
-| body| String | 本文 |
+| url | String | 取得先のURL |
 
-ちなみに[sendEmail(String,String,String,Object)](https://developers.google.com/apps-script/reference/gmail/gmail-app#sendEmail(String,String,String,Object))でoptionを指定すれば、細かいオプションが指定可能です。
+### `var ret2 = ret1.getContentText();`
+次に、[HTTPResponse](https://developers.google.com/apps-script/reference/url-fetch/http-response)内の、[getContentText()](https://developers.google.com/apps-script/reference/url-fetch/http-response#getContentText())を利用します。
+これで、レスポンスの内容(HTML)を引き出します。
+引数は不要で、返り値はStringです。

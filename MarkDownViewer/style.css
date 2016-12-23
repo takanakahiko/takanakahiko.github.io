@@ -289,10 +289,9 @@ a.keyword {
 }
 .entry-content pre > code {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   white-space: pre;
   border: 0;
-  background: transparent;
   font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
 .entry-content code {
@@ -300,7 +299,6 @@ a.keyword {
   margin: 0 2px;
   padding: 0 5px;
   border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
   border-radius: 3px;
   font-family: 'Monaco', 'Consolas', 'Courier New', Courier, monospace, sans-serif;
 }
@@ -312,4 +310,8 @@ a.keyword {
   .entry-content img:hover {
   box-shadow: 0 0;
   }
+}
+
+section {
+  margin: 50px;
 }
