@@ -40,7 +40,7 @@ function test(){
 ## 説明
 
 ### `var calendar = CalendarApp.getCalendarById('takanakahiko@gmail.com');`
-[CalendarApp](https://developers.google.com/apps-script/reference/calendar/calendar-app)内の[getCalendarById(String)](https://developers.google.com/apps-script/reference/calendar/calendar-app#getCalendarById(String))を利用します。
+[CalendarApp](https://developers.google.com/apps-script/reference/calendar/calendar-app)内の[getCalendarById(id)](https://developers.google.com/apps-script/reference/calendar/calendar-app#getCalendarById(String))を利用します。
 これで、操作するカレンダーを取得できます。
 引数は以下のとおりです。返り値は[Calendar](https://developers.google.com/apps-script/reference/calendar/calendar)です。
 
@@ -50,7 +50,7 @@ function test(){
 
 
 ### `var event = calendar.createAllDayEvent(title,date);`
-[Calendar](https://developers.google.com/apps-script/reference/calendar/calendar)内の[createAllDayEvent(String,Date)](https://developers.google.com/apps-script/reference/calendar/calendar#createAllDayEvent(String,Date))を利用します。
+[Calendar](https://developers.google.com/apps-script/reference/calendar/calendar)内の[createAllDayEvent(title,date)](https://developers.google.com/apps-script/reference/calendar/calendar#createAllDayEvent(String,Date))を利用します。
 これで、操作するカレンダーに終日イベントを作成、追加できます。
 引数は以下のとおりです。返り値は[CalendarEvent](https://developers.google.com/apps-script/reference/calendar/calendar-event)です。
 
