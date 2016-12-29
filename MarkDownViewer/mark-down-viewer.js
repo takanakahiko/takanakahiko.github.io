@@ -3,7 +3,7 @@ function getFile(){
     req.responseType = "text";
     var prop = GetQueryString();
     var filename = (prop && prop["page"]) ? prop["page"] : "test.md";
-    req.open("get", filename , true); // アクセスするファイルを指定
+    req.open("get", "md/" + filename , true); // アクセスするファイルを指定
     req.send(null);// HTTPリクエストの発行
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ
     req.onload = function(){
