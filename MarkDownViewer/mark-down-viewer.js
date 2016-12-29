@@ -40,4 +40,14 @@ function GetQueryString() {
   return null;
 }
 
+function gitHubCallBack(json){
+  var parent = document.getElementById("sec_info");
+  for(var file of json.data){
+    var ele = document.createElement("a");
+    ele.setAttribute("href", "./index.html?page=" + file.name);
+    ele.innerHTML = file.name + "<br>";
+    parent.appendChild(ele);
+  }
+}
+
 window.onload = getFile;
