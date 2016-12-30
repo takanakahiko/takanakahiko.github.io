@@ -15,7 +15,7 @@ function fileToPdf(fileId){
   //PDFに変換する
   var pdf = file.getAs('application/pdf');
 
-  //PDFを
+  //PDFのBlobを返します。
   return pdf;
 }
 

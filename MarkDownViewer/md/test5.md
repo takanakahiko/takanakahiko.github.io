@@ -15,7 +15,7 @@ function getArrayFromSpreadsheet(spreadsheetId,sheetName) {
   //スプレッドシート内のシートを取得します
   var sheet = spreadsheet.getSheetByName(sheetName);
 
-  //スプレッドシート内の
+  //スプレッドシート内の値を取得、返します
   return sheet.getDataRange().getValues();
 }
 
