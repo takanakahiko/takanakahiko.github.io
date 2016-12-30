@@ -1,8 +1,8 @@
 GoogleAppsScript逆引き辞典03(スプレッドシート内の値を全て取得する)
-# スプレッドシート内の値を取得する
+# スプレッドシート内の値を全て取得する
 
 ## ひとこと説明
-`var data =  SpreadsheetApp.openById(spreadsheetId).getSheetByName(sheetName).getDataRange().getValues();`で取得できます。
+`SpreadsheetApp.openById(spreadsheetId).getSheetByName(sheetName).getDataRange().getValues();`で取得できます。
 
 ## 実例
 ### コード.gs
@@ -28,10 +28,10 @@ function test(fileID,fileName) {
   var name = "シート1";
 
   //二次元配列を取得します
-  var file = getArrayFromSpreadsheet(id,name);
+  var data = getArrayFromSpreadsheet(id,name);
 
   //文字に変換して表示してみます
-  Logger.log(JSON.stringify(file));
+  Logger.log(JSON.stringify(data));
 }
 ```
 ### 取得先のシート(例)
