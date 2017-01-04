@@ -22,12 +22,12 @@ function getArrayFromSpreadsheet(spreadsheetId,sheetName) {
 ## 説明
 
 配列型でcookiieが返ってくる。以下例  
-`cookies[0] = FJNADDSPID2=XXXXXXXX; Path=/`
-`cookies[1] = JSESSIONID=YYYYYYYYYYY; Path=/campusp`  
+`cookies[0] = "FJNADDSPID2=XXXXXXXX; Path=/"`
+`cookies[1] = "JSESSIONID=YYYYYYYYYYY; Path=/campusp"`  
 
 
 これを以下の形式にする必要がある  
-`{Cookie : FJNADDSPID2=XXXXXXXX;JSESSIONID=YYYYYYYYYYY;}`  
+`headers = {Cookie : "FJNADDSPID2=XXXXXXXX;JSESSIONID=YYYYYYYYYYY;"}`  
 
 
 こうする  
