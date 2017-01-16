@@ -585,7 +585,7 @@ pre {
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: top left;
   position: relative;
   color: #ffffff;
 }
