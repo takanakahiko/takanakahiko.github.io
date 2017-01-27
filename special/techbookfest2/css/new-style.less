@@ -303,7 +303,7 @@ body {
     }
     h1 {
         margin: 0 0 .2em;
-        line-height: 1;
+        line-height: 120%;
         font-weight: 100;
         color: #A77DC2;
         font-size: 300%;
@@ -315,6 +315,7 @@ body {
       margin: 0;
       font-weight: 300;
       color: #A77DC2;
+      line-height: 120%;
       .screen-sp({
         font-size: 130%;
       });
@@ -322,10 +323,14 @@ body {
         font-size: 110%;
       });
     }
+    p{
+      line-height: 150%;
+    }
 }
 
 .section-header:before{
   // 画面中(PC)
+  /*
   .screen-pc-s({
     content: '';
     background:url(../img/code.jpg);
@@ -338,13 +343,29 @@ body {
     -ms-filter: blur(5px);
     filter: blur(5px);
     position: absolute;
-    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
     top: -5px;
     left: -5px;
     right: -5px;
     bottom: -5px;
-    z-index: -1;/*重なり順序を一番下にしておく*/
-  });
+    z-index: -1;
+  });*/
+  content:url(../img/code.jpg);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
 }
 
 .btn-lg {
@@ -377,7 +398,7 @@ body {
 
 .key-features {
     position: relative;
-    min-height: 900px;
+    min-height: 1000px;
     .screen-sp({
       position: static;
       margin-left: 0;
@@ -416,6 +437,7 @@ body {
 
 .row {
   overflow-x: hidden;
+  background: rgba(255, 255, 255, 1);
     margin-left: -15px;
     margin-right: -15px;
     .screen-sp({
@@ -435,7 +457,7 @@ body {
 
 .key-features .screenshot {
     position: absolute;
-    top: 0;
+    top: 2em;
     left: 520px;
     width: 630px;
     box-shadow: 0 30px 30px rgba(0,0,0,0.3);
