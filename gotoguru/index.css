@@ -1,0 +1,133 @@
+body
+{
+	margin: 0 ;
+	padding: 0 ;
+	font-size: 15px ;
+	line-height: 1.618 ;
+}
+
+/* スマホだけに適用するCSS */
+@media screen and (max-width:479px)
+{
+	body
+	{
+		font-size: 13px ;
+	}
+}
+
+
+.header
+{
+	border-bottom: 3px solid #888 ;
+	text-align: center ;
+	padding: 1em 0 ;
+	margin-bottom: 2em ;
+	background: #e8e8e8 ;
+}
+
+
+.logo-wrapper
+{
+	margin: 0 ;
+	padding: 0 ;
+	line-height: 1 ;
+}
+
+.logo
+{
+	width: 400px ;
+	height: auto ;
+}
+
+/* スマホだけに適用するCSS */
+@media screen and (max-width:479px)
+{
+	.logo
+	{
+		width: 200px ;
+	}
+}
+
+
+.footer
+{
+	border-top: 3px solid #888 ;
+	text-align: center ;
+	margin-top: 2em ;
+	padding: 1em 0 ;
+	background: #e8e8e8 ;
+}
+
+.wrapper
+{
+	width: 1000px ;
+	margin: 0 auto ;
+	padding: 0 ;
+}
+
+/* スマホだけに適用するCSS */
+@media screen and (max-width:479px)
+{
+	.wrapper
+	{
+		width: auto ;
+		padding: 0 10px ;
+	}
+}
+
+
+.main
+{
+	width: 618px ;
+	padding: 20px ;
+	border: 1px solid rgba(0,0,0,.1) ;
+}
+
+.side
+{
+	width: 320px ;
+}
+
+/* スマホだけに適用するCSS */
+@media screen and (max-width:479px)
+{
+	.main
+	{
+		width: auto ;
+		padding: 0 ;
+		border: none ;
+	}
+
+	.side
+	{
+		width: auto ;
+	}
+}
+
+.main
+{
+	float: left ;
+}
+
+.side
+{
+	float: right ;
+	height:1100px;
+	overflow-x: scroll;
+}
+
+/* スマホだけに適用するCSS */
+@media screen and (max-width:479px)
+{
+	.main , .side
+	{
+		float: none ;
+		height:auto;
+		overflow: auto;
+	}
+}
+
+.wrapper
+{
+	overflow: hidden ;
+}
