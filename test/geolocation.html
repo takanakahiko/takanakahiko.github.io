@@ -15,7 +15,16 @@ function successCallback(position) {
     gl_text += "高度の誤差：" + position.coords.altitudeAccuracy + "<br>";
     gl_text += "方角：" + position.coords.heading + "<br>";
     gl_text += "速度：" + position.coords.speed + "<br>";
+
+    gl_text += '<img src="http://maps.google.com/maps/api/staticmap?center='
+      + position.coords.latitude + ',' + position.coords.longitude
+      +'&zoom=13&markers=color:red|'
+      + position.coords.latitude + ',' + position.coords.longitude
+      +'&size=240x320&sensor=false">'
+
   document.getElementById("show_result").innerHTML = gl_text;
+
+
 }
 
 /***** 位置情報が取得できない場合 *****/
