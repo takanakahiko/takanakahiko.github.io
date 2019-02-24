@@ -8,11 +8,13 @@
       </header>
       <div class="card-content">
         <div class="content has-text-centered">
-          <b-icon
-            :icon="icon"
-            size="is-large"
-            type="is-primary"
-          />
+          <a :href="url">
+            <b-icon
+              :icon="icon"
+              size="is-large"
+              type="is-primary"
+            />
+          </a>
         </div>
       </div>
       <footer class="card-footer">
@@ -34,6 +36,10 @@ export default {
       required: true
     },
     icon: {
+      type: String,
+      required: true
+    },
+    url: {
       type: String,
       required: true
     }

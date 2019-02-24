@@ -10,11 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          takanakahiko
         </a>
 
         <div class="navbar-burger">
@@ -63,9 +59,9 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
+          title: 'Works',
+          icon: 'check',
+          to: { name: 'works' }
         }
       ]
     }
