@@ -10,7 +10,14 @@
       Author: <a href="https://github.com/anteriovieira">Antério Vieira</a>
     </h3>
     <div class="columns is-multiline">
-      <card2 v-for="workInfo in workInfos" :key="workInfo.title" :title="workInfo.title" :image="workInfo.image" :tags="workInfo.tags">
+      <card2
+        v-for="workInfo in workInfos"
+        :key="workInfo.title"
+        :title="workInfo.title"
+        :image="workInfo.image"
+        :tags="workInfo.tags"
+        :url="workInfo.url"
+      >
         {{ workInfo.comment }}
       </card2>
     </div>

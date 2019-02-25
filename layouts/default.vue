@@ -6,11 +6,8 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          takanakahiko
+        <a class="navbar-item" href="/">
+          <h1 class="title is-2 has-text-white-bis">takanakahiko</h1>
         </a>
 
         <div class="navbar-burger">
