@@ -51,9 +51,14 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
+          title: 'Top',
           icon: 'home',
           to: { name: 'index' }
+        },
+        {
+          title: 'About',
+          icon: 'pencil',
+          to: { name: 'about' }
         },
         {
           title: 'Works',
