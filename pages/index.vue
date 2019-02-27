@@ -1,56 +1,91 @@
 <template>
-  <section class="section">
-    <div class="columns">
-      <card v-for="linkInfo in links" :key="linkInfo.title" :title="linkInfo.title" :icon="linkInfo.icon" :url="linkInfo.url">
-        {{ linkInfo.comment }}
-      </card>
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title btn10">
+          <span class="fill-in">takanakahiko</span>
+        </p>
+        <p class="subtitle">
+          <span class="fill-in">developer</span> / <span class="fill-in">engineer</span>
+        </p>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <nav class="tabs is-centered">
+        <div class="container">
+          <ul>
+            <li>
+              <nuxt-link :to="{name:'about'}">
+                About
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="{name:'works'}">
+                Works
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
   name: 'HomePage',
-  components: {
-    Card
-  },
-  asyncData() {
-    return {
-      links: [
-        {
-          title: 'GitHub',
-          icon: 'github-circle',
-          comment: 'かいはつ',
-          url: 'https://github.com/takanakahiko'
-        },
-        {
-          title: 'Twitter',
-          icon: 'twitter-circle',
-          comment: 'つぶやき',
-          url: 'https://twitter.com/takanakahiko'
-        },
-        {
-          title: 'Blog',
-          icon: 'blogger',
-          comment: 'つぶやき(ながめ)',
-          url: 'https://takanakahiko.hatenablog.com'
-        },
-        {
-          title: 'Pixiv sketch',
-          icon: 'pencil-circle',
-          comment: 'おえかき',
-          url: 'https://sketch.pixiv.net/@takanakahiko'
-        },
-        {
-          title: 'Facebook',
-          icon: 'facebook-box',
-          comment: 'こじんじょうほう',
-          url: 'https://facebook.com/takanakahiko'
-        }
-      ]
-    }
-  }
+  layout: 'blank'
 }
 </script>
+
+<style scoped>
+.fill-in {
+  display: inline-block;
+  position: relative;
+  overflow: hidden !important;
+  background: transparent !important;
+  z-index: 10;
+  vertical-align: top;
+  animation: fill-in-body 1.2s ease 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes fill-in-body {
+  0% {
+    color: transparent;
+  }
+  49% {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+  99% {
+    color: white;
+  }
+}
+.fill-in::after {
+  content: '';
+  height: 100%;
+  display: block;
+  background: white;
+  position: absolute;
+  top: 0;
+  z-index: -15;
+  animation: fill-in-box 1.2s ease 0.3s;
+  animation-fill-mode: both;
+}
+@keyframes fill-in-box {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  50% {
+    width: 120%;
+    left: 0%;
+  }
+  99% {
+    width: 120%;
+    left: 100%;
+  }
+}
+</style>
