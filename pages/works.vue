@@ -1,36 +1,34 @@
 <template>
-  <section class="section">
-    <h2 class="title is-3 has-text-grey">
-      "Just start  <b-icon
-        icon="rocket"
-        size="is-large"
-      />"
-    </h2>
-    <h3 class="subtitle is-6 has-text-grey">
-      Author: <a href="https://github.com/anteriovieira">Antério Vieira</a>
-    </h3>
-    <div class="columns is-multiline">
-      <card2
-        v-for="workInfo in workInfos"
-        :key="workInfo.title"
-        :title="workInfo.title"
-        :image="workInfo.image"
-        :tags="workInfo.tags"
-        :url="workInfo.url"
-      >
-        {{ workInfo.comment }}
-      </card2>
-    </div>
-  </section>
+  <div>
+    <pageHead>Works</pageHead>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <card2
+            v-for="workInfo in workInfos"
+            :key="workInfo.title"
+            :title="workInfo.title"
+            :image="workInfo.image"
+            :tags="workInfo.tags"
+            :url="workInfo.url"
+          >
+            {{ workInfo.comment }}
+          </card2>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
+import PageHead from '~/components/PageHead'
 import Card2 from '~/components/Card2'
 
 export default {
   name: 'Works',
   components: {
-    Card2
+    Card2,
+    PageHead
   },
   asyncData() {
     return {
@@ -39,7 +37,7 @@ export default {
           title: 'google/clasp',
           image: 'https://takanakahiko.me/images/clasp.jpg',
           tags: ['oss-contribution', 'typescript'],
-          comment: 'Google製OSSのclaspにcontributionしています',
+          comment: 'I contribute to Clasp of Google OSS',
           url: 'https://github.com/google/clasp/commits?author=takanakahiko'
         },
         {
@@ -48,7 +46,7 @@ export default {
             'https://lh3.googleusercontent.com/BRD3N_8nPTM3OGKPoJ1haKyHo8KvCnAJImAT9h7Q7CfeIQg8QkMc5URj-aouYImlMIhmxqcPMVI=w640-h400-e365',
           tags: ['oss-maintenance', 'typescript', 'chrome-extention'],
           comment:
-            'ブラウザで画像を右クリックするだけでslack emojiとして登録できるChrome拡張機能です',
+            'It is a Chrome extension that you can register as slack emoji by right clicking on the image in the browser',
           url: 'https://github.com/google/clasp/commits?author=takanakahiko'
         },
         {
@@ -57,21 +55,22 @@ export default {
             'https://user-images.githubusercontent.com/8784712/47992262-650b1780-e127-11e8-9e58-6c75e22ad99f.png',
           tags: ['saojs', 'scaffolding'],
           comment:
-            'claspを用いた開発をする際のプロジェクトのセットアップを対話的に行うためのツールです',
+            'It is a tool for interactively setting up a project when developing with clasp',
           url: 'https://github.com/takanakahiko/sao-clasp'
         },
         {
           title: 'Movie On Wallpaper',
           image: 'https://takanakahiko.me/images/pic08.gif',
           tags: ['c-sharp', 'windows'],
-          comment: 'Windowsの壁紙を動画にするアプリケーションです',
+          comment:
+            'It is an application that can setting video to Windows wallpaper',
           url: 'https://takanakahiko.me/MovieOnWallpaper/'
         },
         {
           title: 'SocialityFilter API',
           image: 'https://takanakahiko.me/images/pic09.gif',
           tags: ['google-apps-script', 'web-api'],
-          comment: '社会性フィルターAPIです',
+          comment: 'It is a sociality filter API',
           url: 'https://takanakahiko.me/SocialityFilter/'
         }
       ]
