@@ -20,7 +20,7 @@ action "Deploy" {
   runs = "node ./.github/scripts/gh-pages.js"
   secrets = ["GITHUB_TOKEN_FOR_ACTION"]
   env = {
-    GIT_NAME   = "takanakahiko"
-    GIT_EMAILE = "takanakahiko@users.noreply.github.com"
+    GIT_NAME   = "takanakahiko-machine"
+    GIT_EMAILE = "takanakahiko+machine@users.noreply.github.com"
   }
 }
