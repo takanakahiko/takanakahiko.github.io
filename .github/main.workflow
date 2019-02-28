@@ -21,6 +21,6 @@ action "Deploy" {
   secrets = ["GITHUB_TOKEN"]
   env = {
     GIT_NAME   = "takanakahiko"
-    GIT_EMAILE = "takanakahiko@gmail.com"
+    GIT_EMAILE = "takanakahiko@users.noreply.github.com"
   }
 }
