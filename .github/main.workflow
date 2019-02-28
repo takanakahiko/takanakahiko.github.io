@@ -14,18 +14,13 @@ action "Build" {
   runs = "npm run generate"
 }
 
-action "Git Setup" {
+action "Deploy" {
+  needs = "Build"
   uses = "docker://node:latest"
+  runs = "node ./.github/scripts/gh-pages.js"
+  secrets = ["GITHUB_TOKEN"]
   env = {
     GIT_NAME   = "takanakahiko-machine"
     GIT_EMAILE = "takanakahiko+machine@gmail.com"
   }
-  runs = "./.github/scripts/git-setup.sh"
-}
-
-action "Deploy" {
-  needs = ["Build", "Git Setup"]
-  uses = "docker://node:latest"
-  runs = "node ./.github/scripts/gh-pages.js"
-  secrets = ["GITHUB_TOKEN"]
 }
