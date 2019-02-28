@@ -18,7 +18,7 @@ action "Deploy" {
   needs = "Build"
   uses = "docker://node:latest"
   runs = "node ./.github/scripts/gh-pages.js"
-  secrets = ["GITHUB_TOKEN"]
+  secrets = ["GITHUB_TOKEN_FOR_ACTION"]
   env = {
     GIT_NAME   = "takanakahiko"
     GIT_EMAILE = "takanakahiko@users.noreply.github.com"
