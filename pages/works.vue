@@ -35,7 +35,7 @@ export default {
       workInfos: [
         {
           title: 'google/clasp',
-          image: 'https://takanakahiko.me/images/clasp.jpg',
+          image: '/images/clasp.png',
           tags: ['oss-contribution', 'typescript'],
           comment: 'I contribute to Clasp of Google OSS',
           url: 'https://github.com/google/clasp/commits?author=takanakahiko'
@@ -60,7 +60,7 @@ export default {
         },
         {
           title: 'Movie On Wallpaper',
-          image: 'https://takanakahiko.me/images/pic08.gif',
+          image: '/images/mow.gif',
           tags: ['c-sharp', 'windows'],
           comment:
             'It is an application that can setting video to Windows wallpaper',
@@ -68,7 +68,7 @@ export default {
         },
         {
           title: 'SocialityFilter API',
-          image: 'https://takanakahiko.me/images/pic09.gif',
+          image: '/images/sfa.gif',
           tags: ['google-apps-script', 'web-api'],
           comment: 'It is a sociality filter API',
           url: 'https://takanakahiko.me/SocialityFilter/'
