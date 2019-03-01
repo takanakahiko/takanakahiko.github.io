@@ -32,7 +32,7 @@ module.exports = {
   /*
   ** Global CSS
   */
- css: [ '@/assets/fill-in.css' ],
+ css: [ '@/assets/fill-in.css', 'bulma-timeline' ],
 
   /*
   ** Plugins to load before mounting the App

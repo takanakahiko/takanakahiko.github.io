@@ -18,8 +18,14 @@
           I like...
         </h3>
         <div class="columns is-variable">
-          <div v-for="item in likes" :key="item.title" class="column has-text-centered bd-notification">
-            <p><b-icon :icon="item.icon" size="is-large" /></p>
+          <div
+            v-for="item in likes"
+            :key="item.title"
+            class="column has-text-centered bd-notification"
+          >
+            <p>
+              <b-icon :icon="item.icon" size="is-large" />
+            </p>
             <p class="title is-4">
               {{ item.title }}
             </p>
@@ -30,6 +36,20 @@
               {{ item.body }}
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            History
+          </h1>
+          <div class="columns">
+            <div class="column">
+              <timeLine :timeline-content="timelineContent" />
+            </div>
+          </div>          
         </div>
       </div>
     </section>
@@ -57,12 +77,14 @@
 <script>
 import PageHead from '~/components/PageHead'
 import Card from '~/components/Card'
+import TimeLine from '~/components/TimeLine'
 
 export default {
   name: 'AboutMe',
   components: {
     Card,
-    PageHead
+    PageHead,
+    TimeLine
   },
   asyncData() {
     return {
@@ -116,6 +138,38 @@ export default {
           icon: 'facebook-box',
           comment: 'Private relationships',
           url: 'https://facebook.com/takanakahiko'
+        }
+      ],
+      timelineContent: [
+        {
+          title: 'February 2019 - Present',
+          content: 'Japan Digital Design',
+          role: 'Data Engineer(internship)'
+        },
+        {
+          title: 'February 2019 - Present',
+          content: 'Gaiax',
+          role: 'OSS promoter(internship)'
+        },
+        {
+          title: 'April 2018 - Present',
+          content: 'Takushoku University',
+          role: 'Graduate student'
+        },
+        {
+          title: 'February 2018 - January 2019',
+          content: 'Air Closet',
+          role: 'Data scientist(internship)'
+        },
+        {
+          title: 'April 2014 - December 2018',
+          content: 'Non-disclosure (Embedded system development company)',
+          role: 'Fullstack engineer(part-time job)'
+        },
+        {
+          title: 'April 2014 - March 2018',
+          content: 'Takushoku University',
+          role: 'Undergraduate'
         }
       ]
     }
