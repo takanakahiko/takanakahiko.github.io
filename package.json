@@ -35,7 +35,7 @@
     "gh-pages": "2.0.1",
     "node-sass": "4.12.0",
     "nodemon": "1.18.10",
-    "prettier": "1.14.3",
+    "prettier": "1.17.0",
     "sass-loader": "7.1.0",
     "tar": ">=4.4.2"
   }
