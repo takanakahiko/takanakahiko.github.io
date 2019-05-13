@@ -5,7 +5,7 @@
         <h1 class="title">
           <span class="fill-in"><slot /></span>
         </h1>
-      </div>      
+      </div>
     </div>
   </section>
 </template>
