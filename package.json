@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "bulma-timeline": "3.0.1",
+    "bulma-timeline": "3.0.3",
     "cross-env": "5.2.0",
     "nuxt": "2.6.3",
     "nuxt-buefy": "0.3.6"
