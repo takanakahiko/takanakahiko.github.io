@@ -49,7 +49,7 @@
             <div class="column">
               <timeLine :timeline-content="timelineContent" />
             </div>
-          </div>          
+          </div>
         </div>
       </div>
     </section>

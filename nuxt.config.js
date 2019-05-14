@@ -32,7 +32,7 @@ module.exports = {
   /*
   ** Global CSS
   */
- css: [ '@/assets/fill-in.css', 'bulma-timeline' ],
+ css: ['@/assets/fill-in.css', '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css' ],
 
   /*
   ** Plugins to load before mounting the App
@@ -65,7 +65,7 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
           options : {
-              fix : true
+            fix : true
           }
         })
       }
