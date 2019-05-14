@@ -3,11 +3,6 @@ workflow "Install, Build, and Deploy" {
   resolves = ["Deploy"]
 }
 
-workflow "Install and Build" {
-  on = "check_run"
-  resolves = ["Build"]
-}
-
 action "Install" {
   uses = "docker://node:latest"
   runs = "npm ci"
