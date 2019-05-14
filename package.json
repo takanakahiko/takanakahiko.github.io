@@ -15,7 +15,7 @@
   "dependencies": {
     "bulma-timeline": "3.0.3",
     "cross-env": "5.2.0",
-    "nuxt": "2.7.0",
+    "nuxt": "2.7.1",
     "nuxt-buefy": "0.3.6"
   },
   "devDependencies": {
