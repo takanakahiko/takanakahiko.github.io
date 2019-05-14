@@ -50,6 +50,15 @@ export default {
           url: 'https://github.com/google/clasp/commits?author=takanakahiko'
         },
         {
+          title: 'PrismDB',
+          image:
+            '/images/prismdb.png',
+          tags: ['oss-maintenance', 'typescript', 'nuxt.js', 'open-data', 'docker-compose', 'aws', 'express.js'],
+          comment:
+            'PrismDB is a platform to organize information of Pretty series. It is conducted as part of coterie activities.',
+          url: 'https://github.com/prickathon/prismdb'
+        },
+        {
           title: 'sao-clasp',
           image:
             'https://user-images.githubusercontent.com/8784712/47992262-650b1780-e127-11e8-9e58-6c75e22ad99f.png',
