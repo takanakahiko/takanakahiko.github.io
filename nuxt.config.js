@@ -72,5 +72,6 @@ module.exports = {
     }
   },
 
-  layoutTransition: 'fade'
+  layoutTransition: 'fade',
+  pageTransition : 'fade'
 }
