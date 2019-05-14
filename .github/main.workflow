@@ -19,15 +19,15 @@ action "Build" {
   runs = "npm run generate"
 }
 
-# Filter for master branch
-action "Master" {
+# Filter for dev branch
+action "Dev" {
   needs = "Build"
   uses = "actions/bin/filter@master"
-  args = "branch master"
+  args = "branch dev"
 }
 
 action "Deploy" {
-  needs = "Master"
+  needs = "Dev"
   uses = "docker://node:latest"
   runs = "node ./.github/scripts/gh-pages.js"
   secrets = ["TOKEN_FOR_ACTION"]
