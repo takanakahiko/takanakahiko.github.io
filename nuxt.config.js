@@ -32,7 +32,11 @@ module.exports = {
   /*
   ** Global CSS
   */
- css: ['@/assets/fill-in.css', '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css' ],
+ css: [
+   '@/assets/buefy-style.scss',
+   '@/assets/fill-in.css',
+   '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css'
+  ],
 
   /*
   ** Plugins to load before mounting the App
