@@ -12,7 +12,7 @@
     </div>
     <div class="hero-foot">
       <nav class="tabs is-centered">
-        <div class="container">
+        <div class="container" style="margin-bottom:150px">
           <ul>
             <li>
               <nuxt-link :to="{name:'about'}">
