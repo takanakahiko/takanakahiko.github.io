@@ -34,7 +34,7 @@
     "eslint-plugin-vue": "5.2.2",
     "gh-pages": "2.0.1",
     "node-sass": "4.12.0",
-    "nodemon": "1.19.0",
+    "nodemon": "1.19.1",
     "prettier": "1.17.1",
     "sass-loader": "7.1.0",
     "tar": "4.4.8"
