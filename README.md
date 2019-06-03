@@ -1,6 +1,6 @@
 # takanakahiko.github.io
 
-https://takanakahiko.me
+https://takanakahiko.me :)
 
 ## Build Setup
 
