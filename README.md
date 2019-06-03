@@ -1,6 +1,6 @@
 # takanakahiko.github.io
 
-> My excellent Nuxt.js project
+https://takanakahiko.me
 
 ## Build Setup
 
