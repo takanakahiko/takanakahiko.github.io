@@ -32,10 +32,10 @@ module.exports = {
   /*
   ** Global CSS
   */
- css: [
-   '@/assets/buefy-style.scss',
-   '@/assets/fill-in.css',
-   '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css'
+  css: [
+    '@/assets/buefy-style.scss',
+    '@/assets/fill-in.css',
+    '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css'
   ],
 
   /*
@@ -52,6 +52,10 @@ module.exports = {
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy'
   ],
+
+  buefy: {
+    materialDesignIcons: false
+  },
 
   /*
   ** Build configuration
