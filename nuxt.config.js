@@ -53,9 +53,9 @@ module.exports = {
     'nuxt-buefy'
   ],
 
-  buefy: {
-    materialDesignIcons: false
-  },
+  // buefy: {
+  //   materialDesignIcons: false
+  // },
 
   /*
   ** Build configuration
