@@ -16,7 +16,7 @@
     "bulma-timeline": "3.0.4",
     "cross-env": "5.2.0",
     "nuxt": "2.9.2",
-    "nuxt-buefy": "0.3.13"
+    "nuxt-buefy": "0.3.14"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "1.1.2",
