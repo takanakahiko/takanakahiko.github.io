@@ -19,7 +19,7 @@ module.exports = {
       { hid: 'og:description', property: 'og:description', content: pkg.description },
       { hid: 'og:image', property: 'og:image', content: 'https://takanakahiko.me/images/thumbnail.jpg' },
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@takanakahiko' },
+      { name: 'twitter:site', content: '@takanakahiko' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -42,6 +42,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/observe-visibility.js',
     { src: '~plugins/ga.js', ssr: false }
   ],
 
@@ -64,7 +65,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
@@ -72,8 +73,8 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
-          options : {
-            fix : true
+          options: {
+            fix: true
           }
         })
       }
@@ -81,5 +82,5 @@ module.exports = {
   },
 
   layoutTransition: 'fade',
-  pageTransition : 'fade'
+  pageTransition: 'fade'
 }
