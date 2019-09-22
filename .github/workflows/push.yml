@@ -1,8 +1,10 @@
 on: push
 name: Install, Build, and Deploy
 jobs:
-  install:
+  build:
     name: Install
+    branches:
+      - dev
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
