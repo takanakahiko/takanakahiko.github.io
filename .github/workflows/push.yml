@@ -1,10 +1,12 @@
-on: push
+on:
+  push:
+    branches:
+      - master
+
 name: Install, Build, and Deploy
 jobs:
   build:
     name: Install
-    branches:
-      - dev
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
