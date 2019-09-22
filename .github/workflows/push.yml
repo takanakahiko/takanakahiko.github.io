@@ -1,0 +1,31 @@
+on: push
+name: Install, Build, and Deploy
+jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install
+      uses: docker://node:latest
+      with:
+        entrypoint: npm
+        args: ci
+    - name: Build
+      uses: docker://node:latest
+      with:
+        entrypoint: npm
+        args: run generate
+    - name: Dev
+      uses: actions/bin/filter@master
+      with:
+        args: branch dev
+    - name: Deploy
+      uses: docker://node:latest
+      env:
+        GIT_EMAILE: takanakahiko+machine@gmail.com
+        GIT_NAME: takanakahiko-machine
+        TOKEN_FOR_ACTION: ${{ secrets.TOKEN_FOR_ACTION }}
+      with:
+        entrypoint: node
+        args: ./.github/scripts/gh-pages.js
