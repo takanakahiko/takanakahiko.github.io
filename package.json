@@ -17,7 +17,7 @@
     "cross-env": "6.0.3",
     "nuxt": "2.10.1",
     "nuxt-buefy": "0.3.16",
-    "vue-observe-visibility": "0.4.5"
+    "vue-observe-visibility": "0.4.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "1.1.2",
