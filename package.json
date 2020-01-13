@@ -37,7 +37,7 @@
     "node-sass": "4.13.0",
     "nodemon": "2.0.2",
     "prettier": "1.19.1",
-    "sass-loader": "8.0.1",
+    "sass-loader": "8.0.2",
     "tar": "5.0.5"
   }
 }
