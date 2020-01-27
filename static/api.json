@@ -1,0 +1,26 @@
+{
+  "screen_name": "takanakahiko",
+  "name": "Takayuki Nakayama",
+  "age": 23,
+  "like": ["Programming", "OSS", "Girls' Anime"],
+  "products": [
+    {
+      "name": "slack emoji meister",
+      "url": "https://chrome.google.com/webstore/detail/slack-emoji-meister/omcnknklnilbbnoioiaibdkhoonlmdnj"
+    },
+    {
+      "name": "PrismDB",
+      "url": "https://prismdb.takanakahiko.me"
+    },
+    {
+      "name": "sao-clasp",
+      "url": "https://github.com/takanakahiko/sao-clasp"
+    },
+    {
+      "name": "Movie On Wallpaper",
+      "url": "https://takanakahiko.me/MovieOnWallpaper/"
+    }
+  ],
+  "is焼き肉を食べに行きたい": true,
+  "is温泉に浸かりに行きたい": true
+}
