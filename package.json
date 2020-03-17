@@ -15,7 +15,7 @@
   "dependencies": {
     "bulma-timeline": "3.0.4",
     "cross-env": "7.0.2",
-    "nuxt": "2.11.0",
+    "nuxt": "2.12.0",
     "nuxt-buefy": "0.3.24",
     "vue-observe-visibility": "0.4.6"
   },
