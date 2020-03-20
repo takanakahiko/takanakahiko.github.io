@@ -10,22 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install
-      uses: docker://node:latest
-      with:
-        entrypoint: npm
-        args: ci
-    - name: Build
-      uses: docker://node:latest
-      with:
-        entrypoint: npm
-        args: run generate
+    - run: npm ci
+    - run: npm run generate
     - name: Deploy
-      uses: docker://node:latest
-      env:
-        GIT_EMAILE: takanakahiko+machine@gmail.com
-        GIT_NAME: takanakahiko-machine
-        TOKEN_FOR_ACTION: ${{ secrets.TOKEN_FOR_ACTION }}
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        entrypoint: node
-        args: ./.github/scripts/gh-pages.js
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+
