@@ -86,7 +86,7 @@ export default {
     PageHead,
     TimeLine
   },
-  asyncData() {
+  asyncData () {
     return {
       likes: [
         {

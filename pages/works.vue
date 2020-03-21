@@ -30,7 +30,7 @@ export default {
     Card2,
     PageHead
   },
-  asyncData() {
+  asyncData () {
     return {
       workInfos: [
         {

@@ -7,7 +7,8 @@
       <div class="timeline-marker" />
       <div
         v-observe-visibility="visibilityChanged"
-        class="timeline-content">
+        class="timeline-content"
+      >
         <p class="heading">
           {{ content.title }}
         </p>
@@ -31,10 +32,9 @@ export default {
     }
   },
   methods: {
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged (isVisible, entry) {
       const classList = entry.target.classList
-      if(isVisible) classList.add('test')
-      else classList.remove('test')
+      if (isVisible) { classList.add('test') } else { classList.remove('test') }
     }
   }
 }

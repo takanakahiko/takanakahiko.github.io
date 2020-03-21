@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       menuActive: false,
       items: [
@@ -75,16 +75,16 @@ export default {
     }
   },
   watch: {
-    $route() {
+    $route () {
       this.menuActive = false
     }
   },
   methods: {
-    menuToggle() {
+    menuToggle () {
       this.menuActive = !this.menuActive
     }
   },
-  head() {
+  head () {
     return {
       bodyAttrs: {
         class: 'has-navbar-fixed-top'
