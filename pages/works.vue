@@ -3,18 +3,16 @@
     <pageHead>Works</pageHead>
     <section class="section">
       <div class="container">
-        <div class="">
-          <Work
-            v-for="workInfo in workInfos"
-            :key="workInfo.title"
-            :title="workInfo.title"
-            :image="workInfo.image"
-            :tags="workInfo.tags"
-            :url="workInfo.url"
-          >
-            {{ workInfo.comment }}
-          </Work>
-        </div>
+        <Work
+          v-for="workInfo in workInfos"
+          :key="workInfo.title"
+          :title="workInfo.title"
+          :image="workInfo.image"
+          :tags="workInfo.tags"
+          :url="workInfo.url"
+        >
+          {{ workInfo.comment }}
+        </Work>
       </div>
     </section>
   </div>
@@ -33,6 +31,15 @@ export default {
   asyncData () {
     return {
       workInfos: [
+        {
+          title: 'Vlueprint',
+          image:
+            '/images/vlueprint.png',
+          tags: ['oss-maintenance', 'nuxt.js', 'open-data', 'CloudRun(GCP)'],
+          comment:
+            'It is a platform for virturl world. For example VTuber, VirtualBeing and more.',
+          url: 'https://github.com/vlueprint/vlueprint'
+        },
         {
           title: 'google/clasp',
           image: '/images/clasp.png',
@@ -57,6 +64,33 @@ export default {
           comment:
             'PrismDB is a platform to organize information of Pretty series. It is conducted as part of coterie activities.',
           url: 'https://github.com/prickathon/prismdb'
+        },
+        {
+          title: 'kotoba palette',
+          image:
+            '/images/momoyan.png',
+          tags: ['nuxt.js', 'Bing Image Search API', 'heroku'],
+          comment:
+            'Suggest colors from keyword.',
+          url: 'https://kotoba-palette.herokuapp.com/'
+        },
+        {
+          title: 'web-demo-suit',
+          image:
+            '/images/web-demo-suit.gif',
+          tags: ['TensorFlow.js', 'バズり駆動開発'],
+          comment:
+            'It is a joke web app. You can easily overlay suit image on yourself and make it looks as wearing it.',
+          url: 'https://github.com/takanakahiko/web-demo-suit'
+        },
+        {
+          title: 'event-to-twitter-list',
+          image:
+            '/images/event-to-twitter-list.png',
+          tags: ['nuxt.js', 'Twitter API', 'heroku'],
+          comment:
+            'You can create a Twitter list that summarizes event participants.',
+          url: 'https://event-to-twitter-list.herokuapp.com/'
         },
         {
           title: 'sao-clasp',
