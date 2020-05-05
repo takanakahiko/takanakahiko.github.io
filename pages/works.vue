@@ -3,8 +3,8 @@
     <pageHead>Works</pageHead>
     <section class="section">
       <div class="container">
-        <div class="columns is-multiline">
-          <card2
+        <div class="">
+          <Work
             v-for="workInfo in workInfos"
             :key="workInfo.title"
             :title="workInfo.title"
@@ -13,7 +13,7 @@
             :url="workInfo.url"
           >
             {{ workInfo.comment }}
-          </card2>
+          </Work>
         </div>
       </div>
     </section>
@@ -22,12 +22,12 @@
 
 <script>
 import PageHead from '~/components/PageHead'
-import Card2 from '~/components/Card2'
+import Work from '~/components/Work'
 
 export default {
   name: 'Works',
   components: {
-    Card2,
+    Work,
     PageHead
   },
   asyncData () {
