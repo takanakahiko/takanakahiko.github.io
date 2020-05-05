@@ -111,13 +111,13 @@ export default {
       links: [
         {
           title: 'GitHub',
-          icon: 'github-circle',
+          icon: 'github',
           comment: 'Various developments',
           url: 'https://github.com/takanakahiko'
         },
         {
           title: 'Twitter',
-          icon: 'twitter-circle',
+          icon: 'twitter',
           comment: 'Various tweets',
           url: 'https://twitter.com/takanakahiko'
         },
@@ -135,26 +135,31 @@ export default {
         },
         {
           title: 'Facebook',
-          icon: 'facebook-box',
+          icon: 'facebook',
           comment: 'Private relationships',
           url: 'https://facebook.com/takanakahiko'
         }
       ],
       timelineContent: [
         {
-          title: 'February 2019 - Present',
-          content: 'Japan Digital Design',
-          role: 'Data Engineer(internship)'
+          title: 'April 2020 - Present',
+          content: 'Akatsuki Inc.',
+          role: 'Engineer'
         },
         {
-          title: 'February 2019 - Present',
+          title: 'February 2019 - March 2020',
+          content: 'Japan Digital Design',
+          role: 'Data and Prototyping Engineer(internship)'
+        },
+        {
+          title: 'February 2019 - March 2020',
           content: 'Gaiax',
           role: 'OSS promoter(internship)'
         },
         {
-          title: 'April 2018 - Present',
+          title: 'April 2018 - March 2020',
           content: 'Takushoku University',
-          role: 'Graduate student'
+          role: 'Information and Design Science Course(Master of Engineering)'
         },
         {
           title: 'February 2018 - January 2019',
