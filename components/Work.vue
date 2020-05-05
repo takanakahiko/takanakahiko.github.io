@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div
+    v-observe-visibility="visibilityChanged"
+    class="work-container"
+  >
     <div class="section columns is-variable is-5">
       <div class="column is-half">
         <a :href="url">
@@ -45,18 +48,37 @@ export default {
       type: String,
       required: true
     }
+  },
+  methods: {
+    visibilityChanged (isVisible, entry) {
+      const classList = entry.target.classList
+      if (isVisible) { classList.add('visible') } else { classList.remove('visible') }
+    }
   }
 }
 </script>
 
 <style scoped>
+.work-container{
+  opacity: 0;
+}
+.work-container.visible{
+  animation-name:fade-in;
+  animation-duration:1s;
+  animation-timing-function: ease-out;
+  animation-delay:0;
+  animation-iteration-count:1;
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+}
+
 .columns {
   align-items: center;
 }
 
 img {
   border-radius: 20px;
-  width: 80%;
   border: 1px rgb(219, 219, 219) solid;
+  object-fit: cover;
 }
 </style>
