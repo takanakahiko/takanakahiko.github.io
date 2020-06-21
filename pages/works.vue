@@ -10,9 +10,7 @@
           :image="workInfo.image"
           :tags="workInfo.tags"
           :url="workInfo.url"
-        >
-          {{ workInfo.comment }}
-        </Work>
+        >{{ workInfo.comment }}</Work>
       </div>
     </section>
   </div>
@@ -82,6 +80,15 @@ export default {
           comment:
             'It is a joke web app. You can easily overlay suit image on yourself and make it looks as wearing it.',
           url: 'https://github.com/takanakahiko/web-demo-suit'
+        },
+        {
+          title: '結婚式向けのラフィックメモリーサービス「メモリ」さま LP制作',
+          image:
+            '/images/memori.png',
+          tags: ['nuxt.js', 'SEO', 'Web accessibility'],
+          comment:
+            'I\'ve created a landing page at the request from "Memori", a wedding memory service.',
+          url: 'https://memoriwedding.com/'
         },
         {
           title: 'event-to-twitter-list',
