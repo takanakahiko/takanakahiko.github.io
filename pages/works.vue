@@ -82,7 +82,7 @@ export default {
           url: 'https://github.com/takanakahiko/web-demo-suit'
         },
         {
-          title: '結婚式向けのラフィックメモリーサービス「メモリ」さま LP制作',
+          title: '「メモリ」さま LP制作',
           image:
             '/images/memori.png',
           tags: ['nuxt.js', 'SEO', 'Web accessibility'],
