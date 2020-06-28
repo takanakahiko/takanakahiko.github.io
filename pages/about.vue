@@ -95,7 +95,7 @@ export default {
           icon: 'laptop',
           title: 'Programming',
           comment: 'I like coding.',
-          body: 'Python / Typescript / Elixir / ...'
+          body: 'Python / TypeScript / Elixir / ...'
         },
         {
           icon: 'earth',
