@@ -4,6 +4,7 @@
 
 <script>
 import * as THREE from 'three'
+import icon from '~/assets/icon.jpg'
 
 export default {
   name: 'RotateBox',
@@ -35,7 +36,7 @@ export default {
       const camera = new THREE.PerspectiveCamera(75, 600 / 200, 0.1, 1000)
       const light = new THREE.DirectionalLight(0xFFFFFF)
       const geometry = new THREE.BoxGeometry(1, 1, 1)
-      const texture = new THREE.TextureLoader().load('images/icon.jpg')
+      const texture = new THREE.TextureLoader().load(icon)
       const material = new THREE.MeshBasicMaterial({ map: texture })
       const cube = new THREE.Mesh(geometry, material)
 
