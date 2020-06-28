@@ -10,7 +10,9 @@
           :image="workInfo.image"
           :tags="workInfo.tags"
           :url="workInfo.url"
-        >{{ workInfo.comment }}</Work>
+        >
+          {{ workInfo.comment }}
+        </Work>
       </div>
     </section>
   </div>

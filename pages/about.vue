@@ -2,9 +2,9 @@
   <div>
     <pageHead>About me</pageHead>
     <section class="section has-text-centered">
-      <figure class="title container image avatar is-128x128">
-        <img class="is-rounded" src="~assets/animated-icon.gif">
-      </figure>
+      <div class="container">
+        <rotate-box />
+      </div>
       <div class="container">
         <p>Hi! please call me Takanakahiko.</p>
         <p>I'd like to create a creative work that makes someone's heart move.</p>
@@ -78,13 +78,15 @@
 import PageHead from '~/components/PageHead'
 import Card from '~/components/Card'
 import TimeLine from '~/components/TimeLine'
+import RotateBox from '~/components/RotateBox'
 
 export default {
   name: 'AboutMe',
   components: {
     Card,
     PageHead,
-    TimeLine
+    TimeLine,
+    RotateBox
   },
   asyncData () {
     return {
