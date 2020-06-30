@@ -4,12 +4,13 @@
 
 <script>
 import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import icon from '~/assets/icon.jpg'
 
 export default {
   name: 'RotateBox',
   data () {
-    return { scene: null, renderer: null, camera: null, light: null, geometry: null, material: null, cube: null }
+    return { scene: null, renderer: null, camera: null, light: null, geometry: null, material: null, cube: null, controls: null }
   },
   mounted () {
     if (process.client) {
@@ -20,6 +21,8 @@ export default {
         antialias: true,
         canvas: $canvas
       })
+
+      this.controls = new OrbitControls(this.camera, $canvas)
 
       this.camera.position.set(0, 0, 2)
       this.light.position.set(0, 0, 10)
