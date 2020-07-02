@@ -81,7 +81,7 @@ module.exports = {
     },
     transpile: [
       'three/examples/jsm/controls/OrbitControls.js'
-    ], 
+    ]
   },
 
   layoutTransition: 'fade',
