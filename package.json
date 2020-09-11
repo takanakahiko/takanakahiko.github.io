@@ -16,7 +16,7 @@
     "bulma-timeline": "3.0.4",
     "cross-env": "7.0.2",
     "nuxt": "2.14.5",
-    "nuxt-buefy": "0.4.2",
+    "nuxt-buefy": "0.4.3",
     "three": "0.120.1",
     "vue-observe-visibility": "0.4.6"
   },
