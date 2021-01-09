@@ -35,7 +35,7 @@
     "eslint-plugin-standard": "4.1.0",
     "eslint-plugin-vue": "7.4.0",
     "node-sass": "5.0.0",
-    "nodemon": "2.0.6",
+    "nodemon": "2.0.7",
     "prettier": "2.2.1",
     "sass-loader": "10.1.0",
     "tar": "6.0.5"
