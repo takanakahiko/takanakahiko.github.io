@@ -8,7 +8,7 @@
       </header>
       <div class="card-content">
         <div class="content has-text-centered">
-          <a :href="url">
+          <a :href="url" target="_blank" rel="noopener noreferrer">
             <b-icon
               :icon="icon"
               size="is-large"

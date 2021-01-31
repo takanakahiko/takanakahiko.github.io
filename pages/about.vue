@@ -140,6 +140,12 @@ export default {
           icon: 'facebook',
           comment: 'Private relationships',
           url: 'https://facebook.com/takanakahiko'
+        },
+        {
+          title: 'Wishlist',
+          icon: 'amazon',
+          comment: 'Please give me a present',
+          url: 'https://www.amazon.jp/hz/wishlist/ls/2X1XQIFXKS456'
         }
       ],
       timelineContent: [
