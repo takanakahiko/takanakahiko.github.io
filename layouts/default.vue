@@ -74,6 +74,13 @@ export default {
       ]
     }
   },
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'has-navbar-fixed-top'
+      }
+    }
+  },
   watch: {
     $route () {
       this.menuActive = false
@@ -82,13 +89,6 @@ export default {
   methods: {
     menuToggle () {
       this.menuActive = !this.menuActive
-    }
-  },
-  head () {
-    return {
-      bodyAttrs: {
-        class: 'has-navbar-fixed-top'
-      }
     }
   }
 }
