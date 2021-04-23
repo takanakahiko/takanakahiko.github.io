@@ -1,7 +1,7 @@
 {
   "screen_name": "takanakahiko",
   "name": "Takayuki Nakayama",
-  "age": 23,
+  "age": 25,
   "like": ["Programming", "OSS", "Girls' Anime"],
   "products": [
     {
@@ -22,5 +22,6 @@
     }
   ],
   "is焼き肉を食べに行きたい": true,
-  "is温泉に浸かりに行きたい": true
+  "is温泉に浸かりに行きたい": true,
+  "is交際": false
 }
