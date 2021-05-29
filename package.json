@@ -17,7 +17,7 @@
     "cross-env": "7.0.3",
     "nuxt": "2.15.6",
     "nuxt-buefy": "0.4.7",
-    "three": "0.128.0",
+    "three": "0.129.0",
     "vue-observe-visibility": "1.0.0"
   },
   "devDependencies": {
