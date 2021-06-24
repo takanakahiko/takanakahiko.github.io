@@ -15,7 +15,7 @@ module.exports = {
       { hid: 'og:url', property: 'og:url', content: 'https://takanakahiko.me' },
       { hid: 'og:title', property: 'og:title', content: 'takanakahiko I/O' },
       { hid: 'og:description', property: 'og:description', content: pkg.description },
-      { hid: 'og:image', property: 'og:image', content: 'https://takanakahiko.me/images/thumbnail.jpg' },
+      { hid: 'og:image', property: 'og:image', content: 'https://takanakahiko.me/images/Announce_Page_OG_Image.jpg' },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@takanakahiko' }
     ],
