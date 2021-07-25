@@ -3,7 +3,7 @@
     v-observe-visibility="visibilityChanged"
     class="work-container"
   >
-    <div class="section columns is-variable is-5">
+    <div class="section columns is-variable">
       <div class="column is-half">
         <a :href="url">
           <figure class="image is-4by3">
@@ -74,6 +74,8 @@ export default {
 
 .columns {
   align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 img {
