@@ -41,6 +41,15 @@ export default {
           url: 'https://github.com/vlueprint/vlueprint'
         },
         {
+          title: 'kanaria.codes',
+          image:
+            'https://kanaria.codes/ogp.png',
+          tags: ['nuxt.js', 'Directing'],
+          comment:
+            'Implemented the web page used for the production by composer Kanaria. The design is by 雷雷公社.',
+          url: 'https://kanaria.codes'
+        },
+        {
           title: 'google/clasp',
           image: '/images/clasp.png',
           tags: ['oss-contribution', 'typescript'],
