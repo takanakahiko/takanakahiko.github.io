@@ -19,7 +19,14 @@ module.exports = {
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@takanakahiko' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        charset: "utf-8",
+        src:
+          "https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver,IntersectionObserverEntry"
+      }
+    ]
   },
 
   /*
