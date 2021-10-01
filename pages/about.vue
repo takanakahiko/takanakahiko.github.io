@@ -11,6 +11,13 @@
         <p>My dream is to credits my name on the endrol of my loving content.</p>
         <p>I guess that sometimes the dreams come true.</p>
       </div>
+      <div class="container p-2">
+        <span>Master of Engineering</span>
+        /
+        <span>Engineer at Akatsuki Inc.</span>
+        /
+        <a href="https://www.credential.net/c47472d8-6707-4302-ab04-4dbf65b66d30" target="_blank" rel="noopener noreferrer">Professional Cloud Architect</a>
+      </div>
     </section>
     <section class="section">
       <div class="container">
@@ -112,6 +119,12 @@ export default {
           url: 'https://github.com/takanakahiko'
         },
         {
+          title: 'LinkedIn',
+          icon: 'linkedin',
+          comment: '',
+          url: 'https://www.linkedin.com/in/takanakahiko/'
+        },
+        {
           title: 'Twitter',
           icon: 'twitter',
           comment: 'Various tweets',
@@ -140,6 +153,12 @@ export default {
           icon: 'amazon',
           comment: 'Please give me a present',
           url: 'https://www.amazon.jp/hz/wishlist/ls/2X1XQIFXKS456'
+        },
+        {
+          title: 'Discord',
+          icon: 'discord',
+          comment: '',
+          url: 'https://discordapp.com/users/375939020867239938'
         }
       ],
       timelineContent: [
