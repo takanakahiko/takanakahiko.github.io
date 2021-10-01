@@ -54,21 +54,17 @@
       </div>
     </section>
     <section class="section">
-      <div class="container">
-        <h3 class="title is-3">
-          Links
-        </h3>
-        <div class="columns">
-          <card
-            v-for="linkInfo in links"
-            :key="linkInfo.title"
-            :title="linkInfo.title"
-            :icon="linkInfo.icon"
-            :url="linkInfo.url"
-          >
-            {{ linkInfo.comment }}
-          </card>
-        </div>
+      <div class="container has-text-centered">
+        <a
+          v-for="linkInfo in links"
+          :key="linkInfo.title"
+          :title="linkInfo.title"
+          :href="linkInfo.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <b-icon :icon="linkInfo.icon" size="is-large" />
+        </a>
       </div>
     </section>
   </div>
@@ -76,14 +72,12 @@
 
 <script>
 import PageHead from '~/components/PageHead'
-import Card from '~/components/Card'
 import TimeLine from '~/components/TimeLine'
 import RotateBox from '~/components/RotateBox'
 
 export default {
   name: 'AboutMe',
   components: {
-    Card,
     PageHead,
     TimeLine,
     RotateBox
