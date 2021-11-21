@@ -1,7 +1,7 @@
 <template>
   <div
     v-observe-visibility="visibilityChanged"
-    class="work-container"
+    class="work-container visible"
   >
     <div class="section columns is-variable">
       <div class="column is-half">
@@ -50,10 +50,10 @@ export default {
     }
   },
   methods: {
-    visibilityChanged (isVisible, entry) {
-      const classList = entry.target.classList
-      if (isVisible) { classList.add('visible') } else { classList.remove('visible') }
-    }
+    // visibilityChanged (isVisible, entry) {
+    //   const classList = entry.target.classList
+    //   if (isVisible) { classList.add('visible') } else { classList.remove('visible') }
+    // }
   }
 }
 </script>
