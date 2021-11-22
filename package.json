@@ -9,8 +9,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
   },
   "dependencies": {
     "bulma-timeline": "3.0.4",
@@ -21,22 +19,8 @@
     "vue-observe-visibility": "1.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "6.0.1",
-    "babel-eslint": "10.1.0",
-    "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-loader": "4.0.2",
-    "eslint-plugin-import": "2.24.2",
-    "eslint-plugin-jest": "24.4.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-standard": "4.1.0",
-    "eslint-plugin-vue": "7.17.0",
     "node-sass": "6.0.1",
     "nodemon": "2.0.12",
-    "prettier": "2.3.2",
     "sass-loader": "10.2.0",
     "tar": "6.1.11"
   }
