@@ -6,7 +6,6 @@
     <div v-for="(content, i) in timelineContent" :key="i" class="timeline-item">
       <div class="timeline-marker" />
       <div
-        v-observe-visibility="visibilityChanged"
         class="timeline-content"
       >
         <p class="heading">
@@ -43,8 +42,6 @@ export default {
 <style>
 .timeline-content{
   opacity: 0;
-}
-.test{
   animation-name:fade-in;
   animation-duration:1s;
   animation-timing-function: ease-out;
