@@ -8,9 +8,11 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate"
   },
   "dependencies": {
+    "@mdi/font": "^4.8.95",
+    "bulma": "^0.9.3",
     "bulma-timeline": "3.0.4",
     "cross-env": "7.0.3",
     "nuxt": "2.15.8",
