@@ -5,24 +5,22 @@
   "author": "takanakahiko",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start",
+    "generate": "nuxi generate"
   },
   "dependencies": {
     "@mdi/font": "^4.8.95",
     "bulma": "^0.9.3",
     "bulma-timeline": "3.0.4",
     "cross-env": "7.0.3",
-    "nuxt": "2.15.8",
     "three": "0.132.2",
     "vue-observe-visibility": "1.0.0"
   },
   "devDependencies": {
-    "node-sass": "6.0.1",
     "nodemon": "2.0.12",
-    "sass-loader": "10.2.0",
-    "tar": "6.1.11"
+    "nuxt3": "^3.0.0-27288761.d3fb512",
+    "sass": "^1.43.4"
   }
 }
