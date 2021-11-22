@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  data () {
+  setup () {
     return {
       menuActive: false,
       items: [
