@@ -56,7 +56,13 @@ module.exports = {
   */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/google-adsense', {
+      id: 'ca-pub-3487572990110265',
+      pageLevelAds: true
+      // analyticsUacct: 'UA-XXX-X',
+      // analyticsDomainName: 'example.com'
+    }
   ],
 
   // buefy: {
