@@ -17,6 +17,8 @@
         <span>Engineer at Akatsuki Inc.</span>
         /
         <a href="https://www.credential.net/c47472d8-6707-4302-ab04-4dbf65b66d30" target="_blank" rel="noopener noreferrer">Professional Cloud Architect</a>
+        /
+        <a href="https://www.jafp.or.jp/exam/about/" target="_blank" rel="noopener noreferrer">3rd grade Certified Skilled Professional of Financial Planning</a>
       </div>
     </section>
     <section class="section">
