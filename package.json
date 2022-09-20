@@ -21,23 +21,9 @@
     "vue-observe-visibility": "1.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "6.0.1",
     "@nuxtjs/google-adsense": "2.0.0",
-    "babel-eslint": "10.1.0",
-    "eslint": "7.32.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-loader": "4.0.2",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jest": "26.2.2",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-promise": "5.2.0",
-    "eslint-plugin-standard": "4.1.0",
-    "eslint-plugin-vue": "7.20.0",
     "node-sass": "6.0.1",
     "nodemon": "2.0.17",
-    "prettier": "2.6.2",
     "sass-loader": "10.2.1",
     "tar": "6.1.11"
   }
