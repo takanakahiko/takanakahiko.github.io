@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@nuxtjs/google-adsense": "2.0.0",
-    "node-sass": "6.0.1",
     "nodemon": "2.0.17",
+    "sass": "^1.54.9",
     "sass-loader": "10.2.1",
     "tar": "6.1.11"
   }
