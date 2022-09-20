@@ -56,6 +56,10 @@ export default defineNuxtConfig({
       pageLevelAds: true
       // analyticsUacct: 'UA-XXX-X',
       // analyticsDomainName: 'example.com'
+    }],
+    ['@nuxtjs/google-gtag', {
+      id: 'UA-87763752-1',
+      debug: true,
     }]
   ],
 
