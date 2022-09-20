@@ -1,6 +1,5 @@
 <template>
   <div
-    v-observe-visibility="visibilityChanged"
     class="work-container visible"
   >
     <div class="section columns is-variable">
@@ -48,12 +47,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  methods: {
-    // visibilityChanged (isVisible, entry) {
-    //   const classList = entry.target.classList
-    //   if (isVisible) { classList.add('visible') } else { classList.remove('visible') }
-    // }
   }
 }
 </script>
@@ -61,8 +54,6 @@ export default {
 <style scoped>
 .work-container{
   opacity: 0;
-}
-.work-container.visible{
   animation-name:fade-in;
   animation-duration:1s;
   animation-timing-function: ease-out;
