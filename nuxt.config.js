@@ -60,16 +60,8 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    },
     transpile: [
       'three/examples/jsm/controls/OrbitControls.js'
     ]
   },
-
-  layoutTransition: 'fade',
-  pageTransition: 'fade'
 }
