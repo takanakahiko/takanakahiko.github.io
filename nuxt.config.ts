@@ -1,6 +1,9 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 const pkg = require('./package')
 
-module.exports = {
+export default defineNuxtConfig({
+
   /*
   ** Headers of the page
   */
@@ -64,4 +67,4 @@ module.exports = {
       'three/examples/jsm/controls/OrbitControls.js'
     ]
   },
-}
+})
