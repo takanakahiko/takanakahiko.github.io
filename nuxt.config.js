@@ -38,9 +38,10 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/buefy-style.scss',
+    '@/assets/bulma-style.scss',
     '@/assets/fill-in.css',
-    '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css'
+    '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css',
+    '@mdi/font/scss/materialdesignicons.scss',
   ],
 
   /*
@@ -55,8 +56,6 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-3487572990110265',
       pageLevelAds: true
@@ -64,10 +63,6 @@ module.exports = {
       // analyticsDomainName: 'example.com'
     }]
   ],
-
-  // buefy: {
-  //   materialDesignIcons: false
-  // },
 
   /*
   ** Build configuration

@@ -18,11 +18,11 @@
         <div class="content">
           <slot />
         </div>
-        <b-taglist>
-          <b-tag v-for="tag in tags" :key="tag" type="is-info">
+        <div class="tags">
+          <span v-for="tag in tags" :key="tag" type="tag is-info">
             #{{ tag }}
-          </b-tag>
-        </b-taglist>
+          </span>
+        </div>
       </div>
     </div>
     <hr>

@@ -33,7 +33,9 @@
             class="column has-text-centered bd-notification"
           >
             <p>
-              <b-icon :icon="item.icon" size="is-large" />
+              <span class="icon is-large">
+                <i :class="['mdi', 'mdi-' + item.icon, 'mdi-48px']"></i>
+              </span>
             </p>
             <p class="title is-4">
               {{ item.title }}
@@ -72,7 +74,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <b-icon :icon="linkInfo.icon" size="is-large" />
+          <span class="icon is-large">
+            <i :class="['mdi', 'mdi-' + linkInfo.icon, 'mdi-48px']"></i>
+          </span>
         </a>
       </div>
     </section>
