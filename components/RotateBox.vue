@@ -9,7 +9,7 @@ import icon from '~/assets/icon.jpg'
 
 export default {
   name: 'RotateBox',
-  data () {
+  setup () {
     return { scene: null, renderer: null, camera: null, light: null, geometry: null, material: null, cube: null, controls: null }
   },
   mounted () {

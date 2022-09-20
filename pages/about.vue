@@ -91,7 +91,7 @@ export default {
     TimeLine,
     RotateBox
   },
-  asyncData () {
+  setup () {
     return {
       likes: [
         {
