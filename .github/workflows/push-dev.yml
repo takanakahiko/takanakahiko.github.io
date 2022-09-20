@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - dev
+      - migrate-to-nuxt3
 
 name: Install, Build, and Deploy
 jobs:
