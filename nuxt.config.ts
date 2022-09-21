@@ -1,6 +1,11 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 const pkg = require('./package')
 
-module.exports = {
+export default defineNuxtConfig({
+
+  ssr: false,
+
   /*
   ** Headers of the page
   */
@@ -38,63 +43,34 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/buefy-style.scss',
+    '@/assets/bulma-style.scss',
     '@/assets/fill-in.css',
-    '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css'
-  ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '~plugins/observe-visibility.js',
-    { src: '~plugins/ga.js', ssr: false }
+    '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css',
+    '@mdi/font/scss/materialdesignicons.scss',
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-3487572990110265',
-      pageLevelAds: true
-      // analyticsUacct: 'UA-XXX-X',
-      // analyticsDomainName: 'example.com'
-    }]
+    // ['@nuxtjs/google-adsense', {
+    //   id: 'ca-pub-3487572990110265',
+    //   pageLevelAds: true
+    //   // analyticsUacct: 'UA-XXX-X',
+    //   // analyticsDomainName: 'example.com'
+    // }],
+    // ['@nuxtjs/google-gtag', {
+    //   id: 'UA-87763752-1',
+    //   debug: true,
+    // }]
   ],
-
-  // buefy: {
-  //   materialDesignIcons: false
-  // },
 
   /*
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true
-          }
-        })
-      }
-    },
     transpile: [
       'three/examples/jsm/controls/OrbitControls.js'
     ]
   },
-
-  layoutTransition: 'fade',
-  pageTransition: 'fade'
-}
+})

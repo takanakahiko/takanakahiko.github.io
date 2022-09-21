@@ -1,6 +1,5 @@
 <template>
   <div
-    v-observe-visibility="visibilityChanged"
     class="work-container visible"
   >
     <div class="section columns is-variable">
@@ -18,11 +17,11 @@
         <div class="content">
           <slot />
         </div>
-        <b-taglist>
-          <b-tag v-for="tag in tags" :key="tag" type="is-info">
+        <div class="tags">
+          <span v-for="tag in tags" :key="tag" type="tag is-info">
             #{{ tag }}
-          </b-tag>
-        </b-taglist>
+          </span>
+        </div>
       </div>
     </div>
     <hr>
@@ -48,12 +47,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  methods: {
-    // visibilityChanged (isVisible, entry) {
-    //   const classList = entry.target.classList
-    //   if (isVisible) { classList.add('visible') } else { classList.remove('visible') }
-    // }
   }
 }
 </script>
@@ -61,8 +54,6 @@ export default {
 <style scoped>
 .work-container{
   opacity: 0;
-}
-.work-container.visible{
   animation-name:fade-in;
   animation-duration:1s;
   animation-timing-function: ease-out;

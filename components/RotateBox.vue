@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas" width="600" height="200" />
+  <canvas ref="canvas" width="600" height="200" />
 </template>
 
 <script>
@@ -9,14 +9,14 @@ import icon from '~/assets/icon.jpg'
 
 export default {
   name: 'RotateBox',
-  data () {
+  setup () {
     return { scene: null, renderer: null, camera: null, light: null, geometry: null, material: null, cube: null, controls: null }
   },
   mounted () {
     if (process.client) {
       this.init()
 
-      const $canvas = document.getElementById('canvas')
+      const $canvas = this.$refs.canvas
       this.renderer = new THREE.WebGLRenderer({
         antialias: true,
         canvas: $canvas

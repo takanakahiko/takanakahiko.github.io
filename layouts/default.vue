@@ -33,7 +33,7 @@
         </div>
       </div>
     </nav>
-    <nuxt />
+    <slot />
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  data () {
+  setup () {
     return {
       menuActive: false,
       items: [
