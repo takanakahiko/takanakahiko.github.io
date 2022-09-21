@@ -63,7 +63,7 @@ export default {
           tags: ['oss-maintenance', 'typescript', 'chrome-extention'],
           comment:
             'It is a Chrome extension that you can register as slack emoji by right clicking on the image in the browser',
-          url: 'https://github.com/google/clasp/commits?author=takanakahiko'
+          url: 'https://github.com/takanakahiko/slack-emoji-meister'
         },
         {
           title: 'PrismDB',
