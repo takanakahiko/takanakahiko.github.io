@@ -3,12 +3,14 @@ on: [pull_request]
 name: Lint and Build
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - run: npm ci
-    - run: npm run lint
+  # 一回剥がしたのでやめとく
+  # あとで直す
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - run: npm ci
+  #   - run: npm run lint
   build:
     runs-on: ubuntu-latest
     steps:
