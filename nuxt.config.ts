@@ -4,6 +4,8 @@ const pkg = require('./package')
 
 export default defineNuxtConfig({
 
+  ssr: false,
+
   /*
   ** Headers of the page
   */
@@ -51,16 +53,16 @@ export default defineNuxtConfig({
   ** Nuxt.js modules
   */
   modules: [
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-3487572990110265',
-      pageLevelAds: true
-      // analyticsUacct: 'UA-XXX-X',
-      // analyticsDomainName: 'example.com'
-    }],
-    ['@nuxtjs/google-gtag', {
-      id: 'UA-87763752-1',
-      debug: true,
-    }]
+    // ['@nuxtjs/google-adsense', {
+    //   id: 'ca-pub-3487572990110265',
+    //   pageLevelAds: true
+    //   // analyticsUacct: 'UA-XXX-X',
+    //   // analyticsDomainName: 'example.com'
+    // }],
+    // ['@nuxtjs/google-gtag', {
+    //   id: 'UA-87763752-1',
+    //   debug: true,
+    // }]
   ],
 
   /*
