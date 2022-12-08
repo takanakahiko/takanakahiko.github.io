@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.work-container{
+/* .work-container{
   opacity: 0;
   animation-name:fade-in;
   animation-duration:1s;
@@ -61,7 +61,7 @@ export default {
   animation-iteration-count:1;
   animation-direction:normal;
   animation-fill-mode: forwards;
-}
+} */
 
 .columns {
   align-items: center;
