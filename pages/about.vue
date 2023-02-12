@@ -65,7 +65,7 @@
       </div>
     </section>
     <section class="section">
-      <div class="container has-text-centered">
+      <div class="container has-text-centered columns is-mobile is-multiline is-centered">
         <a
           v-for="linkInfo in links"
           :key="linkInfo.title"
@@ -73,9 +73,11 @@
           :href="linkInfo.url"
           target="_blank"
           rel="noopener noreferrer"
+          class="column"
         >
+          <!-- <p >{{ linkInfo.title }}</p> -->
           <span class="icon is-large">
-            <i :class="['mdi', 'mdi-' + linkInfo.icon, 'mdi-48px']"></i>
+            <i :class="['bi', 'bi-' + linkInfo.icon]"></i>
           </span>
         </a>
       </div>
@@ -138,13 +140,13 @@ export default {
         },
         {
           title: 'Blog',
-          icon: 'blogger',
+          icon: 'vector-pen',
           comment: 'Various poems',
           url: 'https://takanakahiko.hatenablog.com'
         },
         {
-          title: 'Pixiv sketch',
-          icon: 'pencil-circle',
+          title: 'Pixiv',
+          icon: 'pencil-fill',
           comment: 'Various illustrations',
           url: 'https://sketch.pixiv.net/@takanakahiko'
         },
@@ -156,7 +158,7 @@ export default {
         },
         {
           title: 'Wishlist',
-          icon: 'amazon',
+          icon: 'gift-fill',
           comment: 'Please give me a present',
           url: 'https://www.amazon.jp/hz/wishlist/ls/2X1XQIFXKS456'
         },

@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     '@/assets/fill-in.css',
     '@/node_modules/bulma-timeline/dist/css/bulma-timeline.min.css',
     '@mdi/font/scss/materialdesignicons.scss',
+    'bootstrap-icons/font/bootstrap-icons.css',
   ],
 
   /*
