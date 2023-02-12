@@ -1,5 +1,9 @@
 <template>
-  <canvas ref="canvas" width="600" height="200" />
+  <div>
+    <canvas ref="canvas" width="600" height="200" />
+    <!-- スクロールした時にこいつの拡大縮小が反応してしまうため覆い隠す -->
+    <div class="cover"></div>
+  </div>
 </template>
 
 <script>
@@ -66,5 +70,16 @@ export default {
 <style>
 canvas {
   width: 100%;
+}
+</style>
+
+<style scoped>
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
 }
 </style>
