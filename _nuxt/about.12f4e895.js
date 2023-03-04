@@ -1,4 +1,4 @@
-import{_ as aa}from"./PageHead.954d133c.js";import{a as Dr,o as Vt,b as Ht,e as Pe,p as za,f as Ba,F as yr,r as Sr,t as Bn,h as ki,w as ka,i as Ga,j as Va,k as kr}from"./entry.d283d79e.js";/**
+import{_ as aa}from"./PageHead.6c93930f.js";import{a as Dr,o as Vt,b as Ht,e as Pe,p as za,f as Ba,F as yr,r as Sr,t as Bn,h as ki,w as ka,i as Ga,j as Va,k as kr}from"./entry.fd752ebf.js";/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
@@ -403,59 +403,6 @@ vec2 equirectUv( in vec3 dir ) {
 	float u = atan( dir.z, dir.x ) * RECIPROCAL_PI2 + 0.5;
 	float v = asin( clamp( dir.y, - 1.0, 1.0 ) ) * RECIPROCAL_PI + 0.5;
 	return vec2( u, v );
-}
-float w0( float a ) {
-	return ( 1.0 / 6.0 ) * ( a * ( a * ( - a + 3.0 ) - 3.0 ) + 1.0 );
-}
-float w1( float a ) {
-	return ( 1.0 / 6.0 ) * ( a *  a * ( 3.0 * a - 6.0 ) + 4.0 );
-}
-float w2( float a ){
-    return ( 1.0 / 6.0 ) * ( a * ( a * ( - 3.0 * a + 3.0 ) + 3.0 ) + 1.0 );
-}
-float w3( float a ) {
-	return ( 1.0 / 6.0 ) * ( a * a * a );
-}
-float g0( float a ) {
-	return w0( a ) + w1( a );
-}
-float g1( float a ) {
-	return w2( a ) + w3( a );
-}
-float h0( float a ) {
-	return - 1.0 + w1( a ) / ( w0( a ) + w1( a ) );
-}
-float h1( float a ) {
-    return 1.0 + w3( a ) / ( w2( a ) + w3( a ) );
-}
-vec4 bicubic( sampler2D tex, vec2 uv, vec4 texelSize, vec2 fullSize, float lod ) {
-	uv = uv * texelSize.zw + 0.5;
-	vec2 iuv = floor( uv );
-    vec2 fuv = fract( uv );
-    float g0x = g0( fuv.x );
-    float g1x = g1( fuv.x );
-    float h0x = h0( fuv.x );
-    float h1x = h1( fuv.x );
-    float h0y = h0( fuv.y );
-    float h1y = h1( fuv.y );
-    vec2 p0 = ( vec2( iuv.x + h0x, iuv.y + h0y ) - 0.5 ) * texelSize.xy;
-    vec2 p1 = ( vec2( iuv.x + h1x, iuv.y + h0y ) - 0.5 ) * texelSize.xy;
-    vec2 p2 = ( vec2( iuv.x + h0x, iuv.y + h1y ) - 0.5 ) * texelSize.xy;
-    vec2 p3 = ( vec2( iuv.x + h1x, iuv.y + h1y ) - 0.5 ) * texelSize.xy;
-    
-    vec2 lodFudge = pow( 1.95, lod ) / fullSize;
-	return g0( fuv.y ) * ( g0x * textureLod( tex, p0, lod ) + g1x * textureLod( tex, p1, lod ) ) +
-		   g1( fuv.y ) * ( g0x * textureLod( tex, p2, lod ) + g1x * textureLod( tex, p3, lod ) );
-}
-vec4 textureBicubic( sampler2D sampler, vec2 uv, float lod ) {
-	vec2 fLodSize = vec2( textureSize( sampler, int( lod ) ) );
-	vec2 cLodSize = vec2( textureSize( sampler, int( lod + 1.0 ) ) );
-	vec2 fLodSizeInv = 1.0 / fLodSize;
-	vec2 cLodSizeInv = 1.0 / cLodSize;
-	vec2 fullSize = vec2( textureSize( sampler, 0 ) );
-	vec4 fSample = bicubic( sampler, uv, vec4( fLodSizeInv, fLodSize ), fullSize, floor( lod ) );
-	vec4 cSample = bicubic( sampler, uv, vec4( cLodSizeInv, cLodSize ), fullSize, ceil( lod ) );
-	return mix( fSample, cSample, fract( lod ) );
 }`,Ul=`#ifdef ENVMAP_TYPE_CUBE_UV
 	#define cubeUV_minMipLevel 4.0
 	#define cubeUV_minTileSize 16.0
@@ -1930,6 +1877,59 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`,su=`#ifdef USE_TRANSMISS
 	uniform mat4 modelMatrix;
 	uniform mat4 projectionMatrix;
 	varying vec3 vWorldPosition;
+	float w0( float a ) {
+		return ( 1.0 / 6.0 ) * ( a * ( a * ( - a + 3.0 ) - 3.0 ) + 1.0 );
+	}
+	float w1( float a ) {
+		return ( 1.0 / 6.0 ) * ( a *  a * ( 3.0 * a - 6.0 ) + 4.0 );
+	}
+	float w2( float a ){
+		return ( 1.0 / 6.0 ) * ( a * ( a * ( - 3.0 * a + 3.0 ) + 3.0 ) + 1.0 );
+	}
+	float w3( float a ) {
+		return ( 1.0 / 6.0 ) * ( a * a * a );
+	}
+	float g0( float a ) {
+		return w0( a ) + w1( a );
+	}
+	float g1( float a ) {
+		return w2( a ) + w3( a );
+	}
+	float h0( float a ) {
+		return - 1.0 + w1( a ) / ( w0( a ) + w1( a ) );
+	}
+	float h1( float a ) {
+		return 1.0 + w3( a ) / ( w2( a ) + w3( a ) );
+	}
+	vec4 bicubic( sampler2D tex, vec2 uv, vec4 texelSize, vec2 fullSize, float lod ) {
+		uv = uv * texelSize.zw + 0.5;
+		vec2 iuv = floor( uv );
+		vec2 fuv = fract( uv );
+		float g0x = g0( fuv.x );
+		float g1x = g1( fuv.x );
+		float h0x = h0( fuv.x );
+		float h1x = h1( fuv.x );
+		float h0y = h0( fuv.y );
+		float h1y = h1( fuv.y );
+		vec2 p0 = ( vec2( iuv.x + h0x, iuv.y + h0y ) - 0.5 ) * texelSize.xy;
+		vec2 p1 = ( vec2( iuv.x + h1x, iuv.y + h0y ) - 0.5 ) * texelSize.xy;
+		vec2 p2 = ( vec2( iuv.x + h0x, iuv.y + h1y ) - 0.5 ) * texelSize.xy;
+		vec2 p3 = ( vec2( iuv.x + h1x, iuv.y + h1y ) - 0.5 ) * texelSize.xy;
+		
+		vec2 lodFudge = pow( 1.95, lod ) / fullSize;
+		return g0( fuv.y ) * ( g0x * textureLod( tex, p0, lod ) + g1x * textureLod( tex, p1, lod ) ) +
+			g1( fuv.y ) * ( g0x * textureLod( tex, p2, lod ) + g1x * textureLod( tex, p3, lod ) );
+	}
+	vec4 textureBicubic( sampler2D sampler, vec2 uv, float lod ) {
+		vec2 fLodSize = vec2( textureSize( sampler, int( lod ) ) );
+		vec2 cLodSize = vec2( textureSize( sampler, int( lod + 1.0 ) ) );
+		vec2 fLodSizeInv = 1.0 / fLodSize;
+		vec2 cLodSizeInv = 1.0 / cLodSize;
+		vec2 fullSize = vec2( textureSize( sampler, 0 ) );
+		vec4 fSample = bicubic( sampler, uv, vec4( fLodSizeInv, fLodSize ), fullSize, floor( lod ) );
+		vec4 cSample = bicubic( sampler, uv, vec4( cLodSizeInv, cLodSize ), fullSize, ceil( lod ) );
+		return mix( fSample, cSample, fract( lod ) );
+	}
 	vec3 getVolumeTransmissionRay( const in vec3 n, const in vec3 v, const in float thickness, const in float ior, const in mat4 modelMatrix ) {
 		vec3 refractionVector = refract( - v, normalize( n ), 1.0 / ior );
 		vec3 modelScale;
