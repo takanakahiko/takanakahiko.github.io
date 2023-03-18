@@ -26,7 +26,7 @@
     "@nuxtjs/google-gtag": "1.0.4",
     "nodemon": "2.0.21",
     "sass": "1.59.3",
-    "sass-loader": "13.2.0",
+    "sass-loader": "13.2.1",
     "tar": "6.1.13"
   }
 }
