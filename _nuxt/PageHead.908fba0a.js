@@ -1,0 +1,1 @@
+import{_ as o,o as t,c,a as s,u as n}from"./entry.47a664c1.js";const _={},a={class:"hero is-primary"},r={class:"hero-body"},i={class:"container"},l={class:"title"},d={class:"fill-in"};function h(e,f){return t(),c("section",a,[s("div",r,[s("div",i,[s("h1",l,[s("span",d,[n(e.$slots,"default")])])])])])}const m=o(_,[["render",h]]);export{m as _};
