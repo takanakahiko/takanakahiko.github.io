@@ -22,7 +22,7 @@
     "three": "0.157.0"
   },
   "devDependencies": {
-    "@nuxtjs/google-adsense": "2.1.0",
+    "@nuxtjs/google-adsense": "3.0.0",
     "@nuxtjs/google-gtag": "1.0.4",
     "nodemon": "3.0.1",
     "sass": "1.69.0",
