@@ -19,7 +19,7 @@
     "bulma-timeline": "3.0.5",
     "cross-env": "7.0.3",
     "nuxt": "3.8.0",
-    "three": "0.157.0"
+    "three": "0.158.0"
   },
   "devDependencies": {
     "@nuxtjs/google-adsense": "3.0.0",
