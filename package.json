@@ -18,7 +18,7 @@
     "bulma": "0.9.4",
     "bulma-timeline": "3.0.5",
     "cross-env": "7.0.3",
-    "nuxt": "3.10.2",
+    "nuxt": "3.10.3",
     "three": "0.161.0"
   },
   "devDependencies": {
