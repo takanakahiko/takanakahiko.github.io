@@ -25,7 +25,7 @@
     "@nuxtjs/google-adsense": "3.0.0",
     "@nuxtjs/google-gtag": "1.0.4",
     "nodemon": "3.1.4",
-    "sass": "1.77.8",
+    "sass": "1.78.0",
     "sass-loader": "16.0.1",
     "tar": "7.4.3"
   }
