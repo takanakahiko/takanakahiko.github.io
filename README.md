@@ -1,4 +1,4 @@
-# takanakahiko.github.io
+# takanakahiko.me
 
 > My excellent Nuxt.js project
 
