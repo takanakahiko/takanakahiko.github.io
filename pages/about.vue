@@ -170,8 +170,18 @@ export default {
         }
       ],
       timelineContent: [
+      {
+          title: 'November 2024 - Present',
+          content: 'U-NEXT Co., Ltd.',
+          role: 'Engineer'
+        },
         {
-          title: 'April 2020 - Present',
+          title: 'April 2020 - October 2024',
+          content: 'KAKEHASHI Inc.',
+          role: 'Engineer(outsourcing)'
+        },
+        {
+          title: 'April 2020 - October 2024',
           content: 'Akatsuki Inc.',
           role: 'Engineer'
         },
